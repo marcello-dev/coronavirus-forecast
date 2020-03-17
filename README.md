@@ -3,7 +3,7 @@ Forecasts for the Coronavirus (Covid-19) infection
 
 # Installation
 
-1. Create a virual environment for Python 3.6 and activate it:
+1. Create a virtual environment for Python 3.6 and activate it:
 
 ```bash
 python -m venv venv
