@@ -31,9 +31,9 @@ c = fit[0][2]
 
 first_january = datetime.strptime('2020/01/01', "%Y/%m/%d")
 infection_peak_date = first_january + timedelta(days=int(b))
-print('Peak of infection:', datetime.strftime(infection_peak_date, "%Y/%m/%d"))
+print('Peak of the infection:', datetime.strftime(infection_peak_date, "%Y/%m/%d"))
 errors = [np.sqrt(fit[1][i][i]) for i in [0, 1, 2]]
-print('Total infected people at the end = {} (min = {}, max = {})'.format(int(c), int(c-errors[2]),int(c+errors[2])))
+print('Total infected people at the end: {} (min: {}, max: {})'.format(int(c), int(c-errors[2]),int(c+errors[2])))
 
 sol = int(fsolve(lambda x : logistic_model(x, a, b, c) - int(c),b))
 
