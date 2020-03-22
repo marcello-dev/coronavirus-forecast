@@ -23,7 +23,8 @@ def logistic_model(x3, a3, b3, c3):
 x = list(df.iloc[:, 0])
 y = list(df.iloc[:, 1])
 
-fit = curve_fit(logistic_model, x, y, p0=[2, 100, 20000])
+initial_values = [4, 100, 25000]
+fit = curve_fit(logistic_model, x, y, p0=initial_values)
 
 a = fit[0][0]
 b = fit[0][1]
